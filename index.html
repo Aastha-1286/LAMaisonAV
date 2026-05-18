@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)file:///D:/website.html#contact -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Maison AV</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+
+    <link href="images//css2" rel="stylesheet">
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            scroll-behavior:smooth;
+        }
+
+        body{
+            background:#f8f1eb;
+            font-family:'Poppins',sans-serif;
+            color:#3d2c24;
+            overflow-x:hidden;
+        }
+
+        h1,h2,h3{
+            font-family:'Cormorant Garamond',serif;
+        }
+
+        /* NAVBAR */
+
+        nav{
+            position:fixed;
+            width:100%;
+            top:0;
+            z-index:1000;
+
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            height:180px;
+            padding:30px 160px;
+
+            background:rgba(248,241,235,0.85);
+            backdrop-filter:blur(12px);
+
+            border-bottom:1px solid rgba(0,0,0,0.05);
+        }
+
+        .logo{
+            text-align:center;
+        }
+		.logo img{
+
+			width:180px;
+			height:auto;
+
+			display:block;
+
+			object-fit:contain;
+		}
+
+        .logo img{
+            width:140px;
+            margin-bottom:5px;
+        }
+		.logo{
+
+			display:flex;
+			justify-content:center;
+			align-items:center;
+		}
+
+        .logo h1{
+            font-size:36px;
+            letter-spacing:6px;
+            color:#2e1f18;
+        }
+
+        .logo p{
+            letter-spacing:8px;
+            font-size:11px;
+            margin-top:5px;
+            color:#9c7554;
+        }
+
+        nav ul{
+            display:flex;
+            gap:35px;
+            list-style:none;
+        }
+
+        nav ul li a{
+            text-decoration:none;
+            color:#3d2c24;
+            font-size:15px;
+            font-weight:500;
+            transition:0.3s;
+        }
+
+        nav ul li a:hover{
+            color:#b88a62;
+        }
+		.logo{
+			display:flex;
+			align-items:center;
+			gap:15px;
+		}
+
+		.logo-symbol{
+
+			width:70px;
+			height:70px;
+
+			border-radius:50%;
+
+			background:
+			linear-gradient(135deg,#d6b08c,#9b6b4b);
+
+			display:flex;
+			justify-content:center;
+			align-items:center;
+
+			color:white;
+
+			font-family:'Cormorant Garamond',serif;
+			font-size:28px;
+			font-weight:700;
+
+			letter-spacing:2px;
+
+			box-shadow:
+			0 8px 20px rgba(0,0,0,0.15);
+		}
+
+		.logo-text h1{
+
+			font-size:34px;
+			letter-spacing:4px;
+			color:#2e1f18;
+		}
+
+		.logo-text p{
+
+			font-size:11px;
+			letter-spacing:8px;
+			color:#9c7554;
+		}
+
+        /* HERO */
+
+        .hero{
+            height:100vh;
+			padding-top:120%;
+			margin-top:180px;
+
+            background:
+            linear-gradient(to right, rgba(40,20,10,0.75), rgba(40,20,10,0.15)),
+            url('https://images.unsplash.com/photo-1559620192-032c4bc4674e?q=80&w=1800&auto=format&fit=crop');
+
+            background-size:cover;
+            background-position:center;
+
+            display:flex;
+            align-items:center;
+
+            padding:120px 8% 0;
+            color:white;
+        }
+
+        .hero-content{
+		    position:absolute;
+			top:18%;
+			left:100px;
+            max-width:650px;
+			margin-left:0;
+			transform:translateY(40px);
+        }
+
+        .hero-content span{
+            color:#d9b08c;
+            letter-spacing:3px;
+            font-size:15px;
+        }
+
+        .hero-content h2{
+            font-size:85px;
+            line-height:0.95;
+            margin:20px 0;
+        }
+
+        .hero-content p{
+            font-size:18px;
+            line-height:1.9;
+            margin-bottom:35px;
+            color:#f4e7df;
+        }
+
+        .hero-content button{
+            padding:16px 38px;
+            border:none;
+            background:#c79a6d;
+            color:white;
+            font-size:15px;
+            cursor:pointer;
+            transition:0.4s;
+            letter-spacing:1px;
+        }
+
+        .hero-content button:hover{
+            background:#9e6f4d;
+            transform:translateY(-3px);
+        }
+}
+
+        /* COMMON SECTION */
+
+        section{
+            padding:80px 60px;
+        }
+
+        section h2{
+            text-align:center;
+            font-size:58px;
+            color:#3b261d;
+            margin-bottom:60px;
+        }
+
+        /* MENU */
+
+        .menu-container{
+		    
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+            gap:35px;
+        }
+
+        .card{
+            background:white;
+            overflow:hidden;
+
+            box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+            transition:0.4s;
+        }
+
+        .card:hover{
+            transform:translateY(-10px);
+        }
+
+        .card img{
+            width:100%;
+            height:320px;
+            object-fit:cover;
+        }
+
+        .card-content{
+            padding:28px;
+            text-align:center;
+        }
+
+        .card-content h3{
+            font-size:36px;
+            margin-bottom:12px;
+            color:#3b261d;
+        }
+
+        .card-content p{
+            line-height:1.8;
+            color:#6f5a4f;
+            margin-bottom:18px;
+        }
+
+        .price{
+            display:block;
+            color:#b88a62;
+            font-weight:600;
+            font-size:22px;
+            margin-bottom:22px;
+        }
+
+        .card-content button{
+            padding:13px 28px;
+            border:1px solid #c79a6d;
+            background:transparent;
+            color:#9e6f4d;
+            cursor:pointer;
+            transition:0.4s;
+        }
+
+        .card-content button:hover{
+            background:#c79a6d;
+            color:white;
+        }
+
+        /* ABOUT */
+
+        .about{
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:60px;
+            align-items:center;
+        }
+
+        .about img{
+            width:100%;
+            height:500px;
+            object-fit:cover;
+        }
+
+        .about-text h2{
+            text-align:left;
+            margin-bottom:25px;
+        }
+
+        .about-text p{
+            line-height:2;
+            color:#5f4d43;
+            margin-bottom:30px;
+        }
+
+        .about-text button{
+            padding:14px 30px;
+            border:none;
+            background:#c79a6d;
+            color:white;
+            cursor:pointer;
+        }
+
+        /* GALLERY */
+
+        .gallery-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:22px;
+        }
+
+        .gallery-grid img{
+            width:100%;
+            height:320px;
+            object-fit:cover;
+            transition:0.4s;
+        }
+
+        .gallery-grid img:hover{
+            transform:scale(1.03);
+        }
+
+        /* REVIEWS */
+
+        .reviews{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:30px;
+        }
+
+        .review-card{
+            background:white;
+            padding:35px;
+
+            box-shadow:0 10px 25px rgba(0,0,0,0.07);
+        }
+
+        .review-card h3{
+            color:#c79a6d;
+            margin-bottom:15px;
+            font-size:28px;
+        }
+
+        .review-card p{
+            line-height:1.9;
+            color:#655348;
+            margin-bottom:18px;
+        }
+
+        .review-card span{
+            color:#9e6f4d;
+            font-weight:600;
+        }
+
+        /* CONTACT */
+
+        .contact{
+            background:#efe1d6;
+            padding:70px;
+        }
+
+        form{
+            display:flex;
+            flex-direction:column;
+            gap:22px;
+            width:70%;
+            margin:auto;
+        }
+
+        form input,
+        form textarea{
+            padding:18px;
+            border:none;
+            background:white;
+            font-size:15px;
+        }
+
+        textarea{
+            height:180px;
+            resize:none;
+        }
+
+        form button{
+            padding:16px;
+            border:none;
+            background:#b88a62;
+            color:white;
+            font-size:15px;
+            cursor:pointer;
+            transition:0.4s;
+        }
+
+        form button:hover{
+            background:#8d6546;
+        }
+
+        /* FOOTER */
+
+        footer{
+            background:#2f1d15;
+            color:white;
+            padding:70px 8% 30px;
+        }
+
+        .footer-container{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:40px;
+        }
+
+        .footer-logo img{
+            width:120px;
+            margin-bottom:10px;
+        }
+
+        .footer-logo h2{
+            text-align:left;
+            font-size:40px;
+            margin-bottom:10px;
+            color:white;
+        }
+
+        .footer-links a{
+            display:block;
+            text-decoration:none;
+            color:#e8d5c8;
+            margin-bottom:10px;
+        }
+
+        .footer-contact p{
+            margin-bottom:12px;
+            color:#e8d5c8;
+        }
+
+        .copyright{
+            text-align:center;
+            margin-top:40px;
+            color:#d7b89d;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:900px){
+
+            nav{
+                flex-direction:column;
+                gap:20px;
+            }
+
+            nav ul{
+                flex-wrap:wrap;
+                justify-content:center;
+            }
+
+            .hero-content h2{
+                font-size:55px;
+            }
+
+            .about{
+                grid-template-columns:1fr;
+            }
+
+            form{
+                width:100%;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+        <ul>
+            <li><a href="file:///D:/website.html#home">HOME</a></li>
+            <li><a href="file:///D:/website.html#menu">MENU</a></li>
+            <li><a href="file:///D:/website.html#about">ABOUT</a></li>
+        </ul>
+
+        <div class="logo">
+			
+
+			<img src="D:\images\logo.png" alt="La Maison AV Logo">
+
+
+			</div>
+
+		
+
+        <ul>
+            <li><a href="file:///D:/website.html#gallery">GALLERY</a></li>
+            <li><a href="file:///D:/website.html#reviews">REVIEWS</a></li>
+            <li><a href="file:///D:/website.html#contact">CONTACT</a></li>
+        </ul>
+
+    </nav>
+
+    <!-- HERO -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <span>HANDCRAFTED WITH PASSION</span>
+
+            <h2>
+                TIMELESS TASTE,<br>
+                PARISIAN SOUL.
+            </h2>
+
+            <p>
+                Indulge in artisan pastries crafted with the finest ingredients,
+                inspired by the elegance and romance of Parisian cafés.
+            </p>
+
+            <button onclick="welcomeMessage()">
+                EXPLORE COLLECTION
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- MENU -->
+
+    <section id="menu">
+
+        <h2>Signature Menu</h2>
+
+        <div class="menu-container">
+
+            <div class="card">
+
+                <img src="D:\images\VanillaBean.png">
+
+                <div class="card-content">
+
+                    <h3>Vanilla Bean Croissant</h3>
+
+                    <p>
+                        A buttery flaky French croissant filled with smooth vanilla bean crème pâtissière and lightly dusted with powdered sugar for a delicate, elegant finish.
+                    </p>
+
+                    <span class="price">₹300</span>
+
+                    <button onclick="addToCart(&#39;Butter Croissant&#39;)">
+                        ADD TO CART
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img src="./images/PistachioCheesecake.png">
+
+                <div class="card-content">
+
+                    <h3>Moonstone Pistachio Cheesecake</h3>
+
+                    <p>
+                        A silky pistachio cheesecake layered with vanilla mousse, finished with delicate rose petals, roasted pistachios, and edible gold accents for an elegant luxury dessert experience.
+                    </p>
+
+                    <span class="price">₹480</span>
+
+                    <button onclick="addToCart(&#39;Chocolate Royal&#39;)">
+                        ADD TO CART
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img src="./images/Tart.png">
+
+                <div class="card-content">
+
+                    <h3>Vanilla Berry Tart</h3>
+
+                    <p>
+                        A delicate French tart layered with silky vanilla bean cream and topped with fresh strawberries, blueberries, raspberries, and blackberries for a perfectly balanced elegant dessert.
+                    </p>
+
+                    <span class="price">₹360</span>
+
+                    <button onclick="addToCart(&#39;Vanilla Berry Tart&#39;)">
+                        ADD TO CART
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ABOUT -->
+
+    <section id="about">
+
+        <div class="about">
+
+            <img src="./images/About.png">
+
+            <div class="about-text">
+
+                <h2>About Us</h2>
+
+                <p>
+                    La Maison AV is a luxury patisserie inspired by the charm of Parisian cafés and the art of fine baking.
+                    Every creation is handcrafted with the finest ingredients,
+                    made to be remembered.
+                </p>
+
+                <button>
+                    LEARN MORE
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- GALLERY -->
+
+    <section id="gallery">
+
+        <h2>Bakery Gallery</h2>
+
+        <div class="gallery-grid">
+
+			<img src="./images/Cupcakes.png">
+
+			<img src="./images/Cake.png">
+
+			<img src="./images/Donuts.png">
+
+			<img src="./images/Breads.png">
+
+        </div>
+
+    </section>
+
+    <!-- REVIEWS -->
+
+    <section id="reviews">
+
+        <h2>Customer Love</h2>
+
+        <div class="reviews">
+
+            <div class="review-card">
+
+                <h3>★★★★★</h3>
+
+                <p>
+                    “Absolutely the prettiest bakery experience ever.”
+                </p>
+
+                <span>— Riya Sharma</span>
+
+            </div>
+
+            <div class="review-card">
+
+                <h3>★★★★★</h3>
+
+                <p>
+                    “Elegant ambience and unforgettable desserts.”
+                </p>
+
+                <span>— Arjun Mehta</span>
+
+            </div>
+
+            <div class="review-card">
+
+                <h3>★★★★★</h3>
+
+                <p>
+                    “Luxury aesthetics with amazing pastries.”
+                </p>
+
+                <span>— Simran Kaur</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+
+        <div class="contact">
+
+            <h2>Contact Us</h2>
+
+            <form id="contactForm">
+
+                <input type="text" id="name" placeholder="Enter your name">
+
+                <input type="email" id="email" placeholder="Enter your email">
+
+                <textarea id="message" placeholder="Enter your message"></textarea>
+
+                <button type="submit">
+                    SEND MESSAGE
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-logo">
+
+                <img src="D:\images\logo.png">
+
+                <h2>La Maison AV</h2>
+
+                <p>Crafted with elegance ✨</p>
+
+            </div>
+
+            <div class="footer-links">
+
+                <h3>Quick Links</h3>
+				
+				
+               <a href="#home">Home</a>
+			   <a href="#menu">Menu</a>
+			   <a href="#about">About</a>
+			   <a href="#gallery">Gallery</a>
+			   <a href="#reviews">Reviews</a>
+
+            </div>
+
+            <div class="footer-contact">
+
+                <h3>Contact</h3>
+
+                <p>Chandigarh, India</p>
+                <p>+91 98765 43210</p>
+                <p>hello@lamaisonav.com</p>
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 La Maison AV Patisserie
+        </div>
+
+    </footer>
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        function welcomeMessage(){
+
+            alert("Welcome to La Maison AV ✨");
+
+        }
+
+        function addToCart(item){
+
+            alert(item + " added to cart!");
+
+        }
+
+        const form = document.getElementById("contactForm");
+
+        form.addEventListener("submit", function(event){
+
+            event.preventDefault();
+
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let message = document.getElementById("message").value;
+
+            if(name === "" || email === "" || message === ""){
+
+                alert("Please fill all fields.");
+
+            }
+
+            else{
+
+                alert("Message sent successfully ✨");
+                form.reset();
+
+            }
+
+        });
+
+    </script>
+
+
+</body></html>
